@@ -8,11 +8,12 @@ const GitHoc = lazy(() => import("../git_hook_hoc/index"));
 const routes = [
   {
     path: "/",
+    element: <Home />,
     children: [
-      {
-        index: true,
-        element: <Home />,
-      },
+      //   {
+      //     index: true,
+      //     element: <Home />,
+      //   },
       {
         path: "hookhoc",
         element: (
