@@ -12,6 +12,9 @@ const HomePage = () => {
             使用HOC的方式实现给TodoList hook组件添加log日志
           </Link>
         </li>
+        <li>
+          <Link to={"/detachstateHoc"}>抽离state控制更新</Link>
+        </li>
       </ul>
       <Outlet />
     </>
