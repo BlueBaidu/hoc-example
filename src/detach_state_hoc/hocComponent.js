@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // 高阶组件
 function hookHOC(WrapComponent) {
   return function IndexWrapper(props) {
-    const [name, setName] = useState("alien");
+    const [name, setName] = useState("Mia");
+    useEffect(() => {
+      console.log("高阶组件监听到的name：", name);
+    }, [name]);
 
     const changeName = (newName) => {
       setName(newName);

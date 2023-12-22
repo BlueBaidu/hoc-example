@@ -5,6 +5,15 @@ import { Outlet, Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <>
+      <h2>HOC 常见功能-- 强化props</h2>
+      <ul>
+        <li>
+          <Link to={"/withstateHoc"}>混入props</Link>
+        </li>
+        <li>
+          <Link to={"/detachstateHoc"}>抽离state控制更新</Link>
+        </li>
+      </ul>
       <h2>HOC 案例集合</h2>
       <ul>
         <li>
@@ -13,9 +22,10 @@ const HomePage = () => {
           </Link>
         </li>
         <li>
-          <Link to={"/detachstateHoc"}>抽离state控制更新</Link>
+          <Link to="/dynamicMount">HOC动态挂载组件</Link>
         </li>
       </ul>
+      <hr></hr>
       <Outlet />
     </>
   );
