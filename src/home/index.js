@@ -24,6 +24,11 @@ const HomePage = () => {
         <li>
           <Link to="/dynamicMount">HOC动态挂载组件</Link>
         </li>
+        <li>
+          <Link to="/renderHijacking">
+            HOC反向继承模式，实现渲染劫持，劫持render函数，替换子节点
+          </Link>
+        </li>
       </ul>
       <hr></hr>
       <Outlet />

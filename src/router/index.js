@@ -7,6 +7,7 @@ const GitHoc = lazy(() => import("../git_hook_hoc/index"));
 const DetachStateHoc = lazy(() => import("../detach_state_hoc/index"));
 const WithStateHoc = lazy(() => import("../with_state_hoc/page"));
 const DynamicMount = lazy(() => import("../dynamic_rendering/index"));
+const RenderHijacking = lazy(() => import("../renderHijacking/index"));
 
 const routes = [
   {
@@ -42,6 +43,14 @@ const routes = [
         element: (
           <Suspense fallback="Loading">
             <DynamicMount />
+          </Suspense>
+        ),
+      },
+      {
+        path: "renderHijacking",
+        element: (
+          <Suspense fallback="Loading">
+            <RenderHijacking />
           </Suspense>
         ),
       },
